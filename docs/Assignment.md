@@ -10,6 +10,7 @@ Het doel is om te laten zien:
 ---
 
 ## Belangrijk
+
 - Dit is een oefenopdracht en staat **volledig los van bol.com**.  
 - Voer alleen de gevraagde scenario’s uit en respecteer de site:  
   - **geen bestellingen plaatsen**  
@@ -23,6 +24,7 @@ Het doel is om te laten zien:
 Je zet vanuit nul een **Node.js + Playwright project** op. In dit project automatiseer je **vier scenario’s**:
 
 ### 1. Homepage en zoekfunctie
+
 - Open de homepage, sluit of accepteer de cookiebanner.  
 - Controleer dat de zoekbalk zichtbaar is.  
 - Zoek op bijvoorbeeld **“lego”**.  
@@ -30,6 +32,7 @@ Je zet vanuit nul een **Node.js + Playwright project** op. In dit project automa
 - Maak een screenshot van de resultatenpagina.  
 
 ### 2. Filteren en sorteren
+
 - Pas een filter toe (bijvoorbeeld categorie of prijs).  
 - Controleer dat de filter zichtbaar is (chip of breadcrumb).  
 - Sorteer resultaten op **laagste prijs**.  
@@ -37,6 +40,7 @@ Je zet vanuit nul een **Node.js + Playwright project** op. In dit project automa
 - Maak een screenshot van de gesorteerde pagina.  
 
 ### 3. Productdetailpagina (PDP)
+
 - Open het eerste zoekresultaat in een nieuwe tab.  
 - Controleer dat **titel, prijs, beschikbaarheid en add-to-cart-knop** zichtbaar zijn.  
 - **Intercepteer en blokkeer calls** naar cart/checkout zodat er geen echte acties gebeuren.  
@@ -44,19 +48,22 @@ Je zet vanuit nul een **Node.js + Playwright project** op. In dit project automa
 - Maak screenshots vóór en na de klik.  
 
 ### 4. Paginering
+
 - Verzamel de eerste vijf titels op pagina 1.  
 - Ga naar pagina 2 en controleer dat de URL dit weerspiegelt.  
-- Verzamel de eerste vijf titels van pagina 2 en controleer dat er **weinig overlap** is met pagina 1.  
+- Verzamel nu ook de eerste vijf titels van pagina 2 en controleer dat de titels uniek zijn op pagina 2 tegenover pagina 1.  
 - Maak screenshots van beide pagina’s.  
 
 Naast het automatiseren van de 4 gevraagde scenario’s, verwachten we dat je aandacht besteedt aan **hoe** je je oplossing opzet:
 
 ### Structuur
+
 - Gebruik een duidelijke en consistente **projectstructuur**.
 - Splits je code op in logische delen (bv. pages, helpers, flows).
 - Houd tests klein en leesbaar; plaats logica in Page Objects of helpers.
 
 ### Codekwaliteit
+
 - Pas het **Page Object Model (POM)** toe.
 - Vermijd duplicatie door **herbruikbare functies** te maken.
 - Gebruik **robuuste selectors** (bv. rol-gebaseerd).
@@ -88,18 +95,22 @@ Note: het is voldoende om een .yml te maken die interactie kan maken met een pip
 Duid hieronder aan wat je hebt afgerond:
 
 ### Structuur & Setup
+
+- [ ] Fork deze repository
 - [ ] Project opgezet en Playwright geïnstalleerd
 - [ ] Page Object Model toegepast
 - [ ] Helpers / utilities toegevoegd waar nodig
 - [ ] Duidelijke projectstructuur gebruikt
 
 ### Scenario’s
+
 - [ ] Homepage & zoekfunctie geautomatiseerd
 - [ ] Filteren & sorteren geautomatiseerd
 - [ ] Productdetailpagina (PDP) geautomatiseerd
 - [ ] Paginering geautomatiseerd
 
 ### Best Practices
+
 - [ ] Robuuste selectors gebruikt
 - [ ] `expect` assertions toegepast
 - [ ] Screenshots toegevoegd
@@ -107,10 +118,18 @@ Duid hieronder aan wat je hebt afgerond:
 - [ ] Stabiele tests (bv. geen `page.waitForTimeout(1_000)`)
 
 ### Documentatie
+
 - [ ] README.md met installatie- en run-instructies
 - [ ] strategy.md met uitleg aanpak, risico’s & flaky test preventie
 
 ### CI/CD
+
 - [ ] Pipeline ingesteld (GitHub Actions / GitLab CI / Bitbucket Pipelines)
 - [ ] Tests draaien automatisch in CI
 - [ ] HTML-rapport en screenshots worden als artifact gepubliceerd
+
+### Oplevering
+
+- [ ] Bezorg ons een link en toegang naar jouw repository 
+- [ ] Zorg dat docs/Strategy.md leesbaar is 
+- [ ] Indien je niet verder geraakt zorg dat docs/README.md de reden bevat onder een extra topic 'Additionele informatie'
