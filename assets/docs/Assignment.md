@@ -119,7 +119,7 @@ Duid hieronder aan wat je hebt afgerond:
 
 ### Documentatie
 
-- [ ] README.md met installatie- en run-instructies
+- [x] README.md met installatie- en run-instructies
 - [x] strategy.md met uitleg aanpak, risico’s & flaky test preventie
 
 ### CI/CD
