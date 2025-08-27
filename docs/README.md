@@ -1,1 +1,0 @@
-# Hier leg je kort uit wat de installatie- en run-instructies zijn.
