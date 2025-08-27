@@ -29,6 +29,8 @@ export class SearchResultsPage {
 
     async filterByCategory(category: string): Promise<void> {
         const categoryLink = this.page.getByRole('link', { name: new RegExp(`^${category}`, 'i') });
+
+        await categoryLink.waitFor({ state: 'visible' });
         await categoryLink.dblclick();
         await this.page.waitForResponse(res => res.url().includes('QueryContextHook') && res.status() === 200);
     }
