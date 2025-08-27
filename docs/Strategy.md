@@ -4,9 +4,9 @@
 Ik heb de testen gebaseerd op de 4 scenarios van de assignment:
 
 ## 1. Homepage en zoekfunctie
-Mijn eerste uitdaging bij het schrijven van deze test was het vinden van een geschikte selector om na te gaan of er resultaten zijn. Initieel dacht ik vrij simpel `product-cards` te kunnen ophalen en vanuit die locator details te kunnen opvragen (`product-title`, `product-price`), maar dit was niet mogelijk aangezien ieder product in meerdere <div>-elementen zat zonder attributen en xpaths wou ik zoveel mogelijk vermijden.  
+Mijn eerste uitdaging bij het schrijven van deze test was het vinden van een geschikte selector om na te gaan of er resultaten zijn. Initieel dacht ik vrij simpel `product-cards` te kunnen ophalen en vanuit die locator details te kunnen opvragen (zoals `product-title` en `product-price`), maar dit was niet mogelijk aangezien ieder product in meerdere `<div>`-elementen zat die dat geen attributen hadden en xpaths wou ik zoveel mogelijk vermijden.  
 
-Ik besloot vervolgens de product-titels op te halen en op basis daarvan na te gaan of er resultaten zijn, dat moet wel lukken, want het zijn de enige <h2>-elementen op de pagina. Ik haalde deze op met de volgende selector:
+Ik besloot dan om de product-titels op te halen en op basis daarvan na te gaan of er resultaten zijn, dat moet wel lukken, want het zijn de enige `<h2>`-elementen op de pagina. Ik haalde deze op met de volgende selector:
 ```ts
 page.getByRole('heading', { level: 2 });
 ```  
