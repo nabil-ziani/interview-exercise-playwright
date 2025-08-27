@@ -14,7 +14,7 @@
 ### Stappen 
 ```bash
 # 1. Clone de repository
-git clone <jouw-repo-url>
+git clone https://github.com/nabil-ziani/interview-exercise-playwright.git
 cd interview-exercise-playwright
 
 # 2. Installeer dependencies
