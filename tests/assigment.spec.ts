@@ -30,11 +30,12 @@ test.describe('SDET Assignment', () => {
   test('should filter by category "Boeken" and sort by price (ascending)', async ({ page }) => {
     const homePage = new HomePage(page);
     const searchResultsPage = new SearchResultsPage(page);
+    const category = 'Boeken';
 
     await homePage.searchForProduct(config.searchTerm);
-    await searchResultsPage.filterByCategory('Boeken');
-    
-    expect(await searchResultsPage.getLastBreadcrumb()).toEqual('Boeken');
+    await searchResultsPage.filterByCategory(category);
+
+    expect(await searchResultsPage.getLastBreadcrumb()).toEqual(category);
         
     await searchResultsPage.sortProducts(SortOption.PRICE_ASC);
 
@@ -51,12 +52,11 @@ test.describe('SDET Assignment', () => {
     const searchResultsPage = new SearchResultsPage(page);
     const productDetailPage = new ProductDetailPage(page);
 
-    await homePage.searchForProduct(config.searchTerm);
-
     await page.route('**/order/**', route => route.abort());
     await page.route('**/basket/**', route => route.abort());
     await page.route('**/checkout/**', route => route.abort());
 
+    await homePage.searchForProduct(config.searchTerm);
     await searchResultsPage.clickFirstProduct();
     const currentUrl = page.url();
 
