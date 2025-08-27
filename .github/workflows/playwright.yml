@@ -8,6 +8,10 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      # Environment variables voor CI
+      BASE_URL: https://www.bol.com
+      SEARCH_TERM: lego
     steps:
     - uses: actions/checkout@v4
     
@@ -46,5 +50,5 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: screenshots
-        path: test-results/*.png
+        path: test-results/
         retention-days: 10
