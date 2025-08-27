@@ -53,7 +53,8 @@ test.describe('SDET Assignment', () => {
 
     await homePage.searchForProduct(config.searchTerm);
 
-    await page.route('**/cart/**', route => route.abort());
+    await page.route('**/order/**', route => route.abort());
+    await page.route('**/basket/**', route => route.abort());
     await page.route('**/checkout/**', route => route.abort());
 
     await searchResultsPage.clickFirstProduct();
@@ -67,8 +68,9 @@ test.describe('SDET Assignment', () => {
     await page.screenshot({ path: 'test-results/product-detail-before.png', fullPage: true });    
     
     await productDetailPage.clickAddToCart();
+    await productDetailPage.closeModal();
 
-    expect(page.url()).toEqual(currentUrl + "#modal_open");
+    expect(page.url()).toEqual(currentUrl);
 
     await page.screenshot({ path: 'test-results/product-detail-after.png', fullPage: true });
   });
