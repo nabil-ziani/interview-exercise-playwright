@@ -7,7 +7,7 @@
 ## 🚀 Installatie
 
 ### Vereisten
-- Node.js 18+ 
+- Node.js
 - npm of yarn
 
 
