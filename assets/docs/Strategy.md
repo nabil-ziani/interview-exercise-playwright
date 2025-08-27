@@ -1,6 +1,6 @@
 # Mijn strategie
 
-## Ik heb de testen gebaseerd op de 4 scenarios van de assignment:
+> Ik heb de testen gebaseerd op de 4 scenarios van de assignment:
 
 ### 1. Homepage en zoekfunctie
 
@@ -90,4 +90,10 @@ Vervolgens klikken we op de add-to-cart button en blijven we op dezelfde pagina 
 
 Ten slotte, het testen van de paginatie. Dit is effectief een bug op [bol.com](https://bol.com), hier heb je [pagina-1](https://www.bol.com/nl/nl/s/?searchtext=lego) van de resultaten voor lego en dit is [pagina-3](https://www.bol.com/nl/nl/s/?searchtext=lego&page=3&bltgh=60cd04c7-17f1-45a9-bb91-b85cf594e87d.g.i.QueryContextHook). Merk op dat er in de url een parameter `page=3` bijkomt, maar de resultaten zijn exact hetzelfde. 
 
-Als de sortering veranderd wordt van `Relevantie` werkt deze functionaliteit wel, maar ik heb de test bewust niet aangepast, omdat het doel van de test niet is om per se te slagen, maar om na te gaan of een bepaalde functionaliteit werkt - en dat is hier niet het geval.
+Als de sortering veranderd wordt van `Relevantie` werkt deze functionaliteit wel, maar ik heb de test bewust niet aangepast, omdat het doel van de test niet is om per se te slagen, maar om na te gaan of een bepaalde functionaliteit werkt - en dat is hier niet het geval. De test is geschreven maar wordt by default overgeslagen.
+
+### CI/CD
+
+Ik heb de pipeline opgezet, maar merkte dat mijn tests faalden omdat [bol.com](https://bol.com) de requests blokkeerde. Ik weet niet hoe ik dit moet omzeilen en ook niet of het toegestaan zou zijn aangezien het om een productie-omgeving gaat. Ik ben hier daarom bewust terughoudend in geweest en heb het daarbij gelaten.
+
+![screenshot](/assets/images/bocked-ip.png)
