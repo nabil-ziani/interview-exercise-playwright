@@ -14,8 +14,12 @@ export class HomePage {
     }
 
     async acceptCookies() {
-        await this.modalCloseButton.waitFor({ state: 'visible' });
-        await this.modalCloseButton.click();
+        try {
+            await this.modalCloseButton.waitFor({ state: 'visible' });
+            await this.modalCloseButton.click();
+        } catch (error) {
+            console.log('Cookies modal not found');
+        }
     }
 
     async searchForProduct(product: string) {

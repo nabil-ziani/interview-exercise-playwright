@@ -4,7 +4,7 @@
 
 > Mijn strategie staat beschreven in [assets/docs/Strategy.md](./assets/docs/Strategy.md)
 
-## Installatie
+## 🚀 Installatie
 
 ### Vereisten
 - Node.js 18+ 
@@ -24,30 +24,30 @@ npm install
 npm run install:browsers
 ```
 
-### Tests Uitvoeren
+## 🧪 Tests Uitvoeren
 
-#### Alle tests
+### Alle tests
 ```bash
 npm test
 ```
 
-#### Tests met UI (voor debugging)
+### Tests met UI (voor debugging)
 ```bash
 npm run test:ui
 ```
 
-#### Tests in headed mode
+### Tests in headed mode
 ```bash
 npm run test:headed
 ```
 
-#### Specifieke test
+### Specifieke test
 ```bash
 npx playwright test tests/assigment.spec.ts
 ```
 
 
-## Additionele informatie
+## 🔧 Additionele informatie
 
 ### CI/CD
 

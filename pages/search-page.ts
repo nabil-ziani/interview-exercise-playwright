@@ -1,6 +1,6 @@
 import { type Locator, type Page } from "@playwright/test";
 import { SortOption } from "../helpers/types";
-import { priceFormatter } from "../helpers/utils";
+import { priceFormatter, waitForUIToUpdate } from "../helpers/utils";
 
 export class SearchResultsPage {
     private readonly heading: Locator;
@@ -32,7 +32,8 @@ export class SearchResultsPage {
 
         await categoryLink.waitFor({ state: 'visible' });
         await categoryLink.dblclick();
-        await this.page.waitForResponse(res => res.url().includes('QueryContextHook') && res.status() === 200);
+
+        await waitForUIToUpdate(this.page);
     }
 
     async getLastBreadcrumb(): Promise<string> {
@@ -48,6 +49,8 @@ export class SearchResultsPage {
             this.sortOptionsDropdown.selectOption(option),
             this.page.waitForResponse(res => res.url().includes('sort') && res.status() === 200)
         ]);
+
+        await waitForUIToUpdate(this.page);
     }
 
     async getFirstThreeProductPrices(): Promise<number[]> {        

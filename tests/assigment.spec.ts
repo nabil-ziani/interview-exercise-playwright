@@ -24,7 +24,7 @@ test.describe('SDET Assignment', () => {
     expect(await searchResultsPage.getPageHeading()).toEqual(`'${product}' in Alle artikelen`);
     expect(await searchResultsPage.getProductHeadingsCount()).toBeGreaterThan(0);
     
-    await page.screenshot({ path: 'test-results/search-results.png', fullPage: true });
+    await page.screenshot({ path: 'test-results/search-results.png', fullPage: false });
   });
 
   test('should filter by category "Boeken" and sort by price (ascending)', async ({ page }) => {
